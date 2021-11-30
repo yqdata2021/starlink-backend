@@ -2,6 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const axios = require("axios");
 
+const port = process.env.PORT || 3001;
+
 const app = express();
 app.use(
   cors({
@@ -30,4 +32,4 @@ app.get("/positions", (req, res) => {
   });
 });
 
-app.listen(3001);
+app.listen(port);
